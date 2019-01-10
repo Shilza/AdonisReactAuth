@@ -24,11 +24,11 @@ class ForgotPass extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const {form, forgotPassword} = this.props;
+        const {form, resetPassword} = this.props;
         form.validateFields((err, {email}) => {
             if (!err) {
                 this.setState({loading: true});
-                forgotPassword({email})
+                resetPassword({email})
                     .then(data => {
                         this.setState({loading: false});
                         message.success(data);
@@ -72,7 +72,7 @@ class ForgotPass extends React.Component {
 
 const mapDispatchToProps = dispatch => {
     return bindActionCreators({
-        forgotPassword: AuthService.forgotPassword
+        resetPassword: AuthService.resetPassword
     }, dispatch);
 };
 

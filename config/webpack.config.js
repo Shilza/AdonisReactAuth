@@ -587,7 +587,7 @@ module.exports = function(webpackEnv) {
             '!**/__tests__/**',
             '!**/?(*.)(spec|test).*',
             '!**/js/setupProxy.*',
-            '!**/js/setupTests.*',
+            '!**/resources/src/setupTests.*',
           ],
           watch: paths.appSrc,
           silent: true,

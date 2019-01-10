@@ -11,7 +11,7 @@ class PasswordController {
      * @param response
      * @returns {Promise<*>}
      */
-    async forgot({request, response}) {
+    async reset({request, response}) {
 
         const rules = {
             email: 'required|email'

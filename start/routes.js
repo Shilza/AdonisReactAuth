@@ -24,7 +24,7 @@ Route.group(() => {
 }).prefix('api/v1/auth');
 
 Route.group(() => {
-    Route.post('forgot', 'PasswordController.forgot');
+    Route.post('reset', 'PasswordController.reset');
     Route.post('update', 'PasswordController.update');
 }).prefix('api/v1/auth/password');
 

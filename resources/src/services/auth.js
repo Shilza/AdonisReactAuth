@@ -71,10 +71,10 @@ export function refresh() {
     });
 }
 
-export function forgotPassword(credentials) {
+export function resetPassword(credentials) {
     return dispatch => (
         new Promise((resolve, reject) => {
-            Http.post('/api/v1/auth/password/forgot', credentials)
+            Http.post('/api/v1/auth/password/reset', credentials)
                 .then(({data}) => {
                     return resolve(data.message)
                 })
