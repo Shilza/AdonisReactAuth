@@ -82,7 +82,7 @@ module.exports = function (proxy, allowedHost) {
         },
         public: allowedHost,
         proxy: {
-            '*': {
+            '/api/': {
                 target: 'http://127.0.0.1:3333',
                 secure: false,
                 changeOrigin: true
